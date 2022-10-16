@@ -1,16 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
 
+/** CSS RESETS **/
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
 /** VARIABLE DECLARATIONS **/
 :root {
     /* width */
     --container-width: clamp(80%, 90% - 2vw , 90%);
     --container-width-total: 100%;
+    --container-width-mobile: 37.5rem;
 
     /* paddings */
-    --resp-padding: calc(5rem + 2vw);
+    --resp-padding: calc(2rem + 2vw);
+    --smaller-padding: 1rem;
     
     /* margins */
-    --resp-margin: calc(5rem + 2vw);
+    --resp-margin: calc(3rem + 2vw);
     --resp-margin-text: calc(0.8rem + 1vw);
     
     /* colors */
@@ -26,29 +39,19 @@
     
     /* typography */
     --font-family-primary: 'League Spartan', sans-serif;
-    --font-size-default: calc(1.6rem + 0.5vw);  
-    --line-height-default: calc(2.6rem + 0.5vw);         --font-size-h1: calc(3.2rem + 1vw);  
-    --line-height-h1: calc(5.2rem + 1vw); 
+    --font-size-default: 1.7rem;  
+    --line-height-default: 2.44rem;         
+    --font-size-h1: 4rem;  
+    --line-height-h1: 3rem; 
     --font-weight-reg: 400; 
     --font-weight-med: 500; 
     --font-weight-bold: 700; 
-}
-
-
-/** CSS RESETS **/
-* {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
 }
 
 img {
     width: var(--container-width-total);
 }
 
-html {
-    font-size: 62.5%;
-}
 
 body {
     font-family: var(--font-family-primary);
@@ -73,7 +76,109 @@ h1 {
 
 .main-container {
     flex-grow: 1;
+    padding: var(--resp-padding);
+    text-align: center;
+    margin: 0 auto;
 }
+
+
+h1.title {
+    font-weight: var(--font-weight-bold);
+    color: var(--dark-magenta);
+    margin-top: var(--resp-margin);
+}
+
+p.services {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    color: var(--dark-magenta);
+}
+
+.ratings-divs {
+    margin: var(--resp-margin) 0;
+}
+
+.rating-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--smaller-padding);
+    padding: var(--smaller-padding);
+    background-color: var(--light-gray-magenta);
+    border-radius: var(--border-radius-sm);
+    margin-bottom: var(--resp-margin-text);
+}
+
+.rating-div p {
+    margin-bottom: 0;
+    font-weight: var(--font-weight-bold);
+    color: var(--dark-magenta);
+}
+
+.review-stars {
+    display: flex;
+}
+
+.review-stars img {
+    width: 3rem;
+}
+
+div.testimonials {
+    margin-bottom: var(--resp-margin);
+    display: flex;
+    flex-direction: column;
+    gap: var(--resp-margin-text);
+}
+
+.card {
+    padding: var(--resp-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--dark-magenta);
+    border-radius: var(--border-radius-sm);
+    gap: var(--resp-margin-text);
+}
+
+.card .top {
+    display: flex;
+    gap: var(--resp-margin-text);
+}
+
+.card .top .avatar {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.card .top div p.name {
+    color: var(--white);
+    margin-bottom: 0;
+}
+
+.card .top div p.tag {
+    color: var(--soft-pink);
+    margin-bottom: 0;
+}
+
+.card p.quote {
+    color: var(--white);
+    text-align: left;
+    font-weight: var(--font-weight-reg) ;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
