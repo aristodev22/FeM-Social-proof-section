@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+/** VARIABLE DECLARATIONS **/
+:root {
+    /* width */
+    --container-width: clamp(80%, 90% - 2vw , 90%);
+    --container-width-total: 100%;
+
+    /* paddings */
+    --resp-padding: calc(5rem + 2vw);
+    
+    /* margins */
+    --resp-margin: calc(5rem + 2vw);
+    --resp-margin-text: calc(0.8rem + 1vw);
+    
+    /* colors */
+    --dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-gray-magenta: hsl(303, 10%, 53%);
+    --light-gray-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+
+    /* border radius */
+    --border-radius-sm: 1rem;
+    --border-radius-circular: 50%;
+    
+    /* typography */
+    --font-family-primary: 'League Spartan', sans-serif;
+    --font-size-default: calc(1.6rem + 0.5vw);  
+    --line-height-default: calc(2.6rem + 0.5vw);         --font-size-h1: calc(3.2rem + 1vw);  
+    --line-height-h1: calc(5.2rem + 1vw); 
+    --font-weight-reg: 400; 
+    --font-weight-med: 500; 
+    --font-weight-bold: 700; 
+}
+
+
+/** CSS RESETS **/
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+img {
+    width: var(--container-width-total);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-default);  
+    line-height: var(--line-height-default); 
+    font-weight: var(--font-weight-reg); 
+    color: var(--dark-gray-magenta);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, p {
+    margin: 0 0 var(--resp-margin-text) 0;
+}
+
+h1 {
+    font-size: var(--font-size-h1);  
+    line-height: var(--line-height-h1); 
+    font-weight: var(--font-weight-bold);
+}
+
+.main-container {
+    flex-grow: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/**FOOTER**/
+.attribution {
+    font-size: 1.1rem;
+    text-align: center;
+    width: 100%;
+    height: 5rem;
+    padding: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:hsl(277, 64%, 61%);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    padding-left: 0.4rem;
+    text-decoration: none;
+}
