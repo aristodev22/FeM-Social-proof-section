@@ -13,13 +13,6 @@ This is a solution to the [Social proof section challenge on Frontend Mentor](ht
 
 ## Overview
 
-### Screenshot
-
-![](./screenshot-desktop.png)
-
-![](./screenshot-mobile.png)
-
-
 ### Links
 
 - [Live Site URL](https://aristodev22.github.io/FeM-Social-proof-section/)
