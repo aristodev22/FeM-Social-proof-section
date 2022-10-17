@@ -14,7 +14,7 @@ html {
 /** VARIABLE DECLARATIONS **/
 :root {
     /* width */
-    --container-width: clamp(80%, 90% - 2vw , 90%);
+    --container-width: clamp(80%, 85% - 2vw , 85%);
     --container-width-total: 100%;
     --container-width-mobile: 37.5rem;
 
@@ -81,7 +81,6 @@ h1 {
     margin: 0 auto;
 }
 
-
 h1.title {
     font-weight: var(--font-weight-bold);
     color: var(--dark-magenta);
@@ -121,13 +120,11 @@ p.services {
 }
 
 .review-stars img {
-    width: 3rem;
+    width: 1.5rem;
 }
 
 div.testimonials {
     margin-bottom: var(--resp-margin);
-    display: flex;
-    flex-direction: column;
     gap: var(--resp-margin-text);
 }
 
@@ -139,6 +136,7 @@ div.testimonials {
     background-color: var(--dark-magenta);
     border-radius: var(--border-radius-sm);
     gap: var(--resp-margin-text);
+    margin-bottom: var(--resp-margin-text);
 }
 
 .card .top {
@@ -165,13 +163,71 @@ div.testimonials {
 .card p.quote {
     color: var(--white);
     text-align: left;
-    font-weight: var(--font-weight-reg) ;
+    font-weight: var(--font-weight-reg);
     margin-bottom: 0;
 }
 
 
+/** ON BIGGER SCREENS **/
+@media screen and (min-width: 1024px) {
+    .main-container {
+        width: var(--container-width);
+    }    
+    div.upper-part {
+        display: grid;
+        gap: 5rem;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: var(--resp-margin);
+    }
+    div.upper-part-text {
+        margin: auto;
+        text-align: left;
+    }
+    h1.title {
+        font-size: calc(var(--font-size-h1) + 2vw);  
+        line-height: calc(var(--line-height-h1) + 2vw); 
+        max-width: 90%;
+    }
+    p.services {
+        font-size: calc(1.8rem + 0.2vw);
+        line-height: calc(2rem + 0.5vw);
+        color: var(--dark-magenta);
+    }
+    .ratings-divs {
+        display: grid;
+        align-items: center;
+        padding: 0 5rem;
+    }
+    .rating-div {
+        flex-direction: row;
+        width: 90%;
+        gap: var(--resp-padding);
+    }
+    .rating-div:nth-child(1) {
+        justify-self: start;
+    }
+    .rating-div:nth-child(2) {
+        justify-self: center;
+    }
+    .rating-div:nth-child(3) {
+        justify-self: end;
+    }
 
-
+    div.testimonials {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 35rem);
+    }
+    .card:nth-child(1) {
+        align-self: start;
+    }
+    .card:nth-child(2) {
+        align-self: center;
+    }
+    .card:nth-child(3) {
+        align-self: end;
+    }
+}
 
 
 
