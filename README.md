@@ -23,7 +23,9 @@ This is a solution to the [Social proof section challenge on Frontend Mentor](ht
 
 - Semantic HTML5 markup
 - Flexbox CSS
-- Responsive layout with mobile, tablet and desktop versions
+- CSS Grid
+- CSS VAriables (Custom Properties)
+- Responsive layout for mobile and desktop screens
 - Mobile first approach
 
 ## Author
